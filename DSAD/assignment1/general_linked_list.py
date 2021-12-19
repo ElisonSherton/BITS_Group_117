@@ -1,4 +1,11 @@
-
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Dec 15 2021 19:40:29 2020
+@Program: BITS WILP SEM_1 DSAD Assignment 1
+@author: Sai Prabhanjan Reddy, Vinayak Nayak and Niyati Aagarwal
+@Section: Sec-2
+@Group: 117
+"""
 class LinkedTreeNode:
     """
     A General Tree linked list structure, Kept minimal to parent child relationship with no weights
