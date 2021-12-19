@@ -1,0 +1,16 @@
+Company: ce
+No of operations: 6
+DETAIL ce
+ACQUIRED:aviation BY:ce
+ACQUIRED:power BY:ce
+ACQUIRED:healthcare BY:ce
+DETAIL ce
+ACQUIRED:additive BY:aviation
+ACQUIRED:additive BY:aviation
+DETAIL aviation
+RELEASE additive
+sdd
+sssa
+dd
+aa
+
