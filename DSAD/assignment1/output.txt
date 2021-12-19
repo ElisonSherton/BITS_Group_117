@@ -1,0 +1,35 @@
+DETAIL: ce
+Acquired companies: none
+No of companies acquired: 0
+ACQUIRED SUCCESS: ce BY:aviation
+ACQUIRED SUCCESS: ce BY:power
+ACQUIRED SUCCESS: ce BY:healthcare
+DETAIL: ce
+Acquired companies: aviation, power, healthcare
+No of companies acquired: 3
+ACQUIRED SUCCESS: aviation BY:additive
+ACQUIRED FAILED:additive BY:aviation; REASON: additive is already acquired by aviation
+DETAIL: aviation
+Acquired companies: additive
+No of companies acquired: 1
+RELEASE SUCCESS: released additive successfully.
+RELEASE FAILED: release additive failed.
+ACQUIRED SUCCESS: aviation BY:additive
+ACQUIRED SUCCESS: power BY:wind-energy
+ACQUIRED SUCCESS: power BY:solar-energy
+ACQUIRED SUCCESS: power BY:appliances
+ACQUIRED SUCCESS: healthcare BY:ct-manufacturer
+ACQUIRED SUCCESS: healthcare BY:lifescience
+ACQUIRED SUCCESS: healthcare BY:pharma
+DETAIL: ce
+Acquired companies: aviation, power, healthcare
+No of companies acquired: 3
+DETAIL: aviation
+Acquired companies: additive
+No of companies acquired: 1
+DETAIL: power
+Acquired companies: wind-energy, solar-energy, appliances
+No of companies acquired: 3
+DETAIL: lifescience
+Acquired companies: none
+No of companies acquired: 0
