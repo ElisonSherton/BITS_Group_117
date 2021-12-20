@@ -1,0 +1,15 @@
+DETAIL: ce
+Acquired companies: none
+No of companies acquired: 0
+ACQUIRED SUCCESS:ce Successfully acquired aviation
+ACQUIRED SUCCESS:ce Successfully acquired power
+ACQUIRED SUCCESS:ce Successfully acquired healthcare
+DETAIL: ce
+Acquired companies: aviation,power,healthcare
+No of companies acquired: 3
+ACQUIRED SUCCESS:aviation Successfully acquired additive
+ACQUIRED FAILED: additive BY:aviation
+DETAIL: aviation
+Acquired companies: additive
+No of companies acquired: 1
+RELEASED SUCCESS: released additive successfully.

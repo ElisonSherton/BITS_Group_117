@@ -1,0 +1,28 @@
+ACQUIRED SUCCESS:General Group Successfully acquired aviation
+ACQUIRED SUCCESS:aviation Successfully acquired aviation fuel
+ACQUIRED SUCCESS:General Group Successfully acquired HOTEL CHAIN
+DETAIL: General Group
+Acquired companies:aviation, HOTEL CHAIN 
+No of companies acquired: 2
+RELEASED SUCCESS: released aviation successfully.
+DETAIL: aviation
+Acquired companies:aviation fuel 
+No of companies acquired: 1
+ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Cab Service
+RELEASED SUCCESS: released aviation fuel successfully.
+ACQUIRED SUCCESS:General Group Successfully acquired Rental Bikes
+DETAIL: General Group
+Acquired companies:HOTEL CHAIN, Rental Bikes
+No of companies acquired: 2
+ACQUIRED SUCCESS:General Group Successfully acquired Tours & Packages
+ACQUIRED SUCCESS:General Group Successfully acquired Spa Center
+ACQUIRED SUCCESS:Tours & Packages Successfully acquired EBOOKINGS
+INVALID FUNCTION!!!
+ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Catering Services
+ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Laundry Services
+ACQUIRED SUCCESS:EBOOKINGS Successfully acquired Payment Gateway
+RELEASED SUCCESS: released Laundry Services successfully.
+RELEASED SUCCESS: released EBBOKINGS successfully.
+DETAIL: General Group
+Acquired companies:HOTEL CHAIN, Rental Bikes, Tours & Packages, Spa Center
+No of companies acquired: 4

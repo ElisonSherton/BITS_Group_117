@@ -1,0 +1,18 @@
+ACQUIRED SUCCESS:General Group Successfully acquired aviation
+ACQUIRED SUCCESS:aviation Successfully acquired aviation fuel
+ACQUIRED SUCCESS:General Group Successfully acquired HOTEL CHAIN
+DETAIL: General Group
+Acquired companies:aviation, HOTEL CHAIN 
+No of companies acquired: 2
+RELEASED SUCCESS: released aviation successfully.
+DETAIL: aviation
+Acquired companies:aviation fuel 
+No of companies acquired: 1
+ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Cab Service
+RELEASED SUCCESS: released aviation fuel successfully.
+ACQUIRED SUCCESS:General Group Successfully acquired Rental Bikes
+DETAIL: General Group
+Acquired companies:HOTEL CHAIN, Rental Bikes
+No of companies acquired: 2
+
+
