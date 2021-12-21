@@ -6,6 +6,8 @@ Created on Wed Dec 15 2021 19:40:29 2020
 @Section: Sec-2
 @Group: 117
 """
+import time
+
 class LinkedTreeNode:
     """
     A General Tree linked list structure, Kept minimal to parent child relationship with no weights
@@ -173,19 +175,25 @@ def release(released_company):
         InputParser.Print("No Company data exist")
 
     search_node, parent = LinkedTreeNode.basic_tree.find_child_and_parent(released_company)
-
     # Checking for node existance
-    if search_node is not None and len(search_node.child_list) == 0:
+    if search_node is not None:
         if parent is None:  # Root node
             LinkedTreeNode.basic_tree = None
         else:
-            parent.remove_node(search_node)
+            if len(search_node.child_list) > 0:
+                for _child in search_node.child_list:
+                    parent.add_node(LinkedTreeNode(_child.company_name))
+                parent.remove_node(search_node)
+            else:
+                parent.remove_node(search_node)
             InputParser.Print("RELEASED SUCCESS: released {0} successfully.".format(search_node.company_name))
     else:
         InputParser.Print("RELEASED FAILED: released {0} failed".format(released_company))
 
 
 if __name__ == "__main__":
+    stat = time.time()
     gTree = InputParser()
     gTree.execute_input()
     gTree.write_out.close()
+    print(time.time()-stat)
