@@ -1,5 +1,5 @@
 Company: General Group
-No of operations: 30
+No of operations: 29
 ACQUIRED:aviation BY:General Group
 ACQUIRED:aviation fuel BY:aviation
 ACQUIRED:HOTEL CHAIN BY: General Group
@@ -13,7 +13,6 @@ DETAIL General Group
 ACQUIRED:Tours & Packages BY: General Group
 ACQUIRED:Spa Center BY: General Group
 ACQUIRED:EBOOKINGS BY:Tours & Packages 
-DISPLAY: General Group
 ACQUIRED:Catering Services BY: HOTEL CHAIN
 ACQUIRED:Laundry Services BY: HOTEL CHAIN
 ACQUIRED:Payment Gateway BY: EBOOKINGS
@@ -21,14 +20,13 @@ RELEASE Laundry Services
 RELEASE EBOOKINGS
 DETAIL General Group
 RELEASE HOTEL CHAIN
-DETAIL HOTEL CHAIN
+DETAIL Catering Services
 ACQUIRED:Event Planners BY: General Group
 ACQUIRED:Wellness Clinic BY: Spa Center
 ACQUIRED:Wellness Clinic BY: Spa Center
 ACQUIRED:Airport Shuttle Service BY: General Group
 DETAIL Tours & Packages
 RELEASE Rental Bikes
-
 RELEASE Wellness Clinic
 DETAIL General Group
 

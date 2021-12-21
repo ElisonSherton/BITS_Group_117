@@ -1,3 +1,5 @@
+Company: General Group
+No of operations: 29
 ACQUIRED SUCCESS:General Group Successfully acquired aviation
 ACQUIRED SUCCESS:aviation Successfully acquired aviation fuel
 ACQUIRED SUCCESS:General Group Successfully acquired HOTEL CHAIN
@@ -5,9 +7,7 @@ DETAIL: General Group
 Acquired companies:aviation, HOTEL CHAIN 
 No of companies acquired: 2
 RELEASED SUCCESS: released aviation successfully.
-DETAIL: aviation
-Acquired companies:aviation fuel 
-No of companies acquired: 1
+aviation does not exist!
 ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Cab Service
 RELEASED SUCCESS: released aviation fuel successfully.
 ACQUIRED SUCCESS:General Group Successfully acquired Rental Bikes
@@ -17,7 +17,6 @@ No of companies acquired: 2
 ACQUIRED SUCCESS:General Group Successfully acquired Tours & Packages
 ACQUIRED SUCCESS:General Group Successfully acquired Spa Center
 ACQUIRED SUCCESS:Tours & Packages Successfully acquired EBOOKINGS
-INVALID FUNCTION!!!
 ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Catering Services
 ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Laundry Services
 ACQUIRED SUCCESS:EBOOKINGS Successfully acquired Payment Gateway
@@ -27,9 +26,9 @@ DETAIL: General Group
 Acquired companies:HOTEL CHAIN, Rental Bikes, Tours & Packages, Spa Center
 No of companies acquired: 4
 RELEASED SUCCESS: released HOTEL CHAIN successfully.
-DETAIL: HOTEL CHAIN
-Acquired companies:Catering Services
-No of companies acquired: 1
+DETAIL: Catering Services
+Acquired companies:NONE
+No of companies acquired: 0
 ACQUIRED SUCCESS:General Group Successfully acquired Event Planners
 ACQUIRED SUCCESS:Spa Center Successfully acquired Wellness Clinic
 Company already exist!!!
@@ -40,4 +39,4 @@ No of companies acquired: 0
 RELEASED SUCCESS: released Rental Bikes successfully.
 INVALID FUNCTION!!!
 RELEASED SUCCESS: released Rental Bikes successfully.
-
+RELEASED SUCCESS: released Wellness Clinic successfully.
