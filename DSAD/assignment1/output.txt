@@ -1,35 +1,41 @@
-DETAIL: ce
+Company: General Group
+No of operations: 29
+ACQUIRED SUCCESS: aviation BY:General Group
+ACQUIRED SUCCESS: aviation fuel BY:aviation
+ACQUIRED SUCCESS: HOTEL CHAIN BY:General Group
+DETAIL: General Group
+Acquired companies: aviation, HOTEL CHAIN
+No of companies acquired: 2
+RELEASE SUCCESS: released aviation successfully.
+DETAIL: aviation
+DETAIL FAILED: aviation does not exist in the organizational hierarchy
+ACQUIRED SUCCESS: Cab Service BY:HOTEL CHAIN
+RELEASE SUCCESS: released aviation fuel successfully.
+ACQUIRED SUCCESS: Rental Bikes BY:General Group
+DETAIL: General Group
+Acquired companies: HOTEL CHAIN, Rental Bikes
+No of companies acquired: 2
+ACQUIRED SUCCESS: Tours & Packages BY:General Group
+ACQUIRED SUCCESS: Spa Center BY:General Group
+ACQUIRED SUCCESS: EBOOKINGS BY:Tours & Packages
+ACQUIRED SUCCESS: Catering Services BY:HOTEL CHAIN
+ACQUIRED SUCCESS: Laundry Services BY:HOTEL CHAIN
+ACQUIRED SUCCESS: Payment Gateway BY:EBOOKINGS
+RELEASE SUCCESS: released Laundry Services successfully.
+RELEASE SUCCESS: released EBOOKINGS successfully.
+DETAIL: General Group
+Acquired companies: HOTEL CHAIN, Rental Bikes, Tours & Packages, Spa Center
+No of companies acquired: 4
+RELEASE SUCCESS: released HOTEL CHAIN successfully.
+DETAIL: Catering Services
 Acquired companies: none
 No of companies acquired: 0
-ACQUIRED SUCCESS: ce BY:aviation
-ACQUIRED SUCCESS: ce BY:power
-ACQUIRED SUCCESS: ce BY:healthcare
-DETAIL: ce
-Acquired companies: aviation, power, healthcare
-No of companies acquired: 3
-ACQUIRED SUCCESS: aviation BY:additive
-ACQUIRED FAILED:additive BY:aviation; REASON: additive is already acquired by aviation
-DETAIL: aviation
-Acquired companies: additive
+ACQUIRED SUCCESS: Event Planners BY:General Group
+ACQUIRED SUCCESS: Wellness Clinic BY:Spa Center
+ACQUIRED FAILED:Wellness Clinic BY:Spa Center
+ACQUIRED SUCCESS: Airport Shuttle Service BY:General Group
+DETAIL: Tours & Packages
+Acquired companies: Payment Gateway
 No of companies acquired: 1
-RELEASE SUCCESS: released additive successfully.
-RELEASE FAILED: release additive failed.
-ACQUIRED SUCCESS: aviation BY:additive
-ACQUIRED SUCCESS: power BY:wind-energy
-ACQUIRED SUCCESS: power BY:solar-energy
-ACQUIRED SUCCESS: power BY:appliances
-ACQUIRED SUCCESS: healthcare BY:ct-manufacturer
-ACQUIRED SUCCESS: healthcare BY:lifescience
-ACQUIRED SUCCESS: healthcare BY:pharma
-DETAIL: ce
-Acquired companies: aviation, power, healthcare
-No of companies acquired: 3
-DETAIL: aviation
-Acquired companies: additive
-No of companies acquired: 1
-DETAIL: power
-Acquired companies: wind-energy, solar-energy, appliances
-No of companies acquired: 3
-DETAIL: lifescience
-Acquired companies: none
-No of companies acquired: 0
+RELEASE SUCCESS: released Rental Bikes successfully.
+RELEASE SUCCESS: released Wellness Clinic successfully.

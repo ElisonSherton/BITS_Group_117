@@ -2,7 +2,7 @@
 @author Vinayak, Sai, Niyati
 @email 2021fc04135@wilp.bits-pilani.ac.in
 @create date 2021-12-19 16:43:05
-@modify date 2021-12-19 18:49:24
+@modify date 2021-12-21 23:30:31
 @desc [Code to implement company acquisition in the form of a general tree using linked lists]
 '''
 
@@ -77,21 +77,23 @@ class Tree:
         Returns:
             str: [Status of the acquisition]
         """
+
+        if self.root is None:
+            return "No company data available"
         
         presence = self.search(parent_company)
         acquired_presence = self.search(acquired_company)
-
         # Check if the company which is acquiring (parent company) is already present in the hierarchy or not
         if not presence[0]:
-            return f"ACQUIRED FAILED: {acquired_company} by {parent_company}; REASON: {parent_company} doesn't exist"
+            return f"ACQUIRED FAILED: {acquired_company} by {parent_company}"
         # Check if the company that is to be acquired is already in the hierarchy
         elif acquired_presence[0]:
-            return f"ACQUIRED FAILED:{acquired_company} BY:{parent_company}; REASON: {acquired_presence[1].company_name} is already acquired by {acquired_presence[1].parent_company.company_name}"
+            return f"ACQUIRED FAILED:{acquired_company} BY:{parent_company}"
         # Otherwise, add the acquired company as a subsidiary of the parent company
         else:
             subsidiary_company = Node(presence[1], acquired_company)
             presence[1].acquired_companies.append(subsidiary_company)
-            return f"ACQUIRED SUCCESS: {parent_company} BY:{acquired_company}"
+            return f"ACQUIRED SUCCESS: {acquired_company} BY:{parent_company}"
     
     def detail(self, company_name: str) -> str:
         """[Given a company's name, prints out the details of that company]
@@ -103,12 +105,16 @@ class Tree:
             str: [Details of the company]
         """
         
+        if self.root is None:
+            return "No company data available"
+
         presence = self.search(company_name)
         
         # Check if the company requested for exists in the organization hierarchy
         # If not, then print detail failed
         if not presence[0]:
             return f"DETAIL: {company_name}\nDETAIL FAILED: {company_name} does not exist in the organizational hierarchy"
+        
         else:
             # Get the node for the company
             company = presence[1]
@@ -133,6 +139,8 @@ class Tree:
         Returns:
             str: [Status of the removal operation]
         """
+        if self.root is None:
+            return "No company data available"
 
         presence = self.search(company_name)
 
@@ -143,7 +151,8 @@ class Tree:
         else:
             to_remove = presence[1]
             if self.root.company_name == company_name:
-                return f"RELEASE FAILED: cannot release the base conglomerate company"
+                self.root = None
+                return f"RELEASE SUCCESS: released {company_name} succesfully."
             else:
                 # Create an empty list for new subsidiaries (devoid of this company)
                 new_subsidiaries = []
@@ -152,36 +161,47 @@ class Tree:
                 for subsidiary in to_remove.parent_company.acquired_companies:
                     if not(subsidiary.company_name == company_name):
                         new_subsidiaries.append(subsidiary)
+                    else:
+                        for grandson_subsidiary in to_remove.acquired_companies:
+                            grandson_subsidiary.parent_company = to_remove.parent_company
+                            new_subsidiaries.append(grandson_subsidiary)
+
                 to_remove.parent_company.acquired_companies = new_subsidiaries
             return f"RELEASE SUCCESS: released {company_name} successfully."
             
 def parse_input(input_pth: str):
     """[Reads an input file, performs the operations in it in a line by line fashion and prints the output to another file]
     """  
-    instructions = Path(input_pth).read_text().split("\n")
+    # Strip leading and trailing whitespaces from instructions and read it
+    instructions = [x.strip() for x in Path(input_pth).read_text().split("\n")]
     
     # Open an output file and start logging everything over there
     with open("output.txt", "w") as f:
+        # Read the base company name and number of operations
         base_conglomerate = instructions[0].replace("Company: ", "")
+        n = int(re.findall(r"\d+", instructions[1])[0])
+        f.writelines(f"Company: {base_conglomerate}\nNo of operations: {n}\n")
         company_hierarchy = Tree(Node(None, base_conglomerate))
-        
-        # Start from the third line of instruction from the input text file
-        for instruction in instructions[2:]:
-            # Write the details of a company
-            if instruction.startswith("DETAIL"):
-                company_name = instruction.replace("DETAIL ","")
-                to_write = company_hierarchy.detail(company_name)
-            # Acquire a company and log it to the output file
-            elif instruction.startswith("ACQUIRED"):
-                acquired_company = re.findall(r"ACQUIRED:([\w|-]+) BY", instruction)[0]
-                parent_company = re.findall(r"BY:([\w|-]+)", instruction)[0]
-                to_write = company_hierarchy.acquire(parent_company, acquired_company)
-            # Release a company and log it to the output file
-            elif instruction.startswith("RELEASE"):
-                to_release = instruction.replace("RELEASE ", "")
-                to_write = company_hierarchy.release(to_release)
-            else:
-                to_write = "ERROR: Couldn't interpret the instruction"  
+            
+        # Start from the third line of instruction from the input text file and read next n lines
+        for instruction in instructions[2 : (n + 1)]:
+            try:
+                # Write the details of a company
+                if instruction.lower().startswith("detail"):
+                    company_name = instruction[7:]
+                    to_write = company_hierarchy.detail(company_name)
+                # Acquire a company and log it to the output file
+                elif instruction.lower().startswith("acquired"):
+                    instruction = instruction[9:]
+                    acquired_company = re.findall(r"(.+?) BY", instruction)[0]
+                    parent_company = re.findall(r"BY:(.+)", instruction)[0]
+                    to_write = company_hierarchy.acquire(parent_company, acquired_company)
+                # Release a company and log it to the output file
+                elif instruction.lower().startswith("release"):
+                    to_release = instruction[8:]
+                    to_write = company_hierarchy.release(to_release)
+            except Exception as e:
+                to_write = "ERROR: Couldn't interpret the instruction"
 
             f.writelines(f"{to_write}\n")
 
