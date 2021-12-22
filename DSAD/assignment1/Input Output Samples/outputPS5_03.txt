@@ -39,4 +39,4 @@ No of companies acquired: 0
 RELEASED SUCCESS: released Rental Bikes successfully.
 INVALID FUNCTION!!!
 RELEASED SUCCESS: released Rental Bikes successfully.
-RELEASED SUCCESS: released Wellness Clinic successfully.
+RELEASED FAILED: Cannot release root node
