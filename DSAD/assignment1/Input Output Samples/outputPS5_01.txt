@@ -12,7 +12,7 @@ ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Cab Service
 RELEASED SUCCESS: released aviation fuel successfully.
 ACQUIRED SUCCESS:General Group Successfully acquired Rental Bikes
 DETAIL: General Group
-Acquired companies:HOTEL CHAIN, Rental Bikes
-No of companies acquired: 2
+Acquired companies:HOTEL CHAIN, aviation fuel, Rental Bikes
+No of companies acquired: 3
 
 
