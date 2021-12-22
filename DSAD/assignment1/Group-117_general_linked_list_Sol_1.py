@@ -2,7 +2,7 @@
 @author Vinayak, Sai, Niyati
 @email 2021fc04135@wilp.bits-pilani.ac.in
 @create date 2021-12-19 16:43:05
-@modify date 2021-12-22 11:35:16
+@modify date 2021-12-22 16:22:22
 @desc [Code to implement company acquisition in the form of a general tree using linked lists]
 '''
 
@@ -85,15 +85,15 @@ class Tree:
         acquired_presence = self.search(acquired_company)
         # Check if the company which is acquiring (parent company) is already present in the hierarchy or not
         if not presence[0]:
-            return f"ACQUIRED FAILED: {acquired_company} by {parent_company}. {parent_company} does not exist in hierarchy"
+            return f"ACQUIRED FAILED: {acquired_company} BY:{parent_company}"
         # Check if the company that is to be acquired is already in the hierarchy
         elif acquired_presence[0]:
-            return f"ACQUIRED FAILED:{acquired_company} BY:{parent_company}. {acquired_company} already in the hierarchy. No child can have two parents."
+            return f"ACQUIRED FAILED: {acquired_company} BY:{parent_company}"
         # Otherwise, add the acquired company as a subsidiary of the parent company
         else:
             subsidiary_company = Node(presence[1], acquired_company)
             presence[1].acquired_companies.append(subsidiary_company)
-            return f"ACQUIRED SUCCESS: {acquired_company} BY:{parent_company}"
+            return f"ACQUIRED SUCCESS: {parent_company} Successfully acquired {acquired_company}"
     
     def detail(self, company_name: str) -> str:
         """[Given a company's name, prints out the details of that company]
@@ -113,7 +113,7 @@ class Tree:
         # Check if the company requested for exists in the organization hierarchy
         # If not, then print detail failed
         if not presence[0]:
-            return f"DETAIL: {company_name}\nDETAIL FAILED: {company_name} does not exist in the organizational hierarchy"
+            return f"DETAIL: {company_name} does not exist"
         
         else:
             # Get the node for the company
@@ -146,13 +146,13 @@ class Tree:
 
         # Check if the requested company to release exists in the organizational hierarchy
         if not presence[0]:
-            return f"RELEASE FAILED: release {company_name} failed. Company to be released does not exist."
+            return f"RELEASED FAILED: released {company_name} failed."
         # Check if the requested company is the master company, if so raise an exception
         else:
             to_remove = presence[1]
             if self.root.company_name == company_name:
                 self.root = None
-                return f"RELEASE SUCCESS: released {company_name} successfully."
+                return f"RELEASED SUCCESS: released {company_name} successfully."
             else:
                 # Create an empty list for new subsidiaries (devoid of this company)
                 new_subsidiaries = []
@@ -167,7 +167,7 @@ class Tree:
                             new_subsidiaries.append(grandson_subsidiary)
 
                 to_remove.parent_company.acquired_companies = new_subsidiaries
-            return f"RELEASE SUCCESS: released {company_name} successfully"
+            return f"RELEASED SUCCESS: released {company_name} successfully."
             
 def parse_input(input_pth: str):
     """[Reads an input file, performs the operations in it in a line by line fashion and prints the output to another file]
@@ -184,7 +184,7 @@ def parse_input(input_pth: str):
         company_hierarchy = Tree(Node(None, base_conglomerate))
             
         # Start from the third line of instruction from the input text file and read next n lines
-        for instruction in instructions[2 : (n + 1)]:
+        for instruction in instructions[2 : (n + 2)]:
             try:
                 # Write the details of a company
                 if instruction.lower().startswith("detail"):
@@ -204,7 +204,8 @@ def parse_input(input_pth: str):
                 to_write = "ERROR: Couldn't interpret the instruction"
 
             f.writelines(f"{to_write}\n")
+
 if __name__ == "__main__":
-    stat = time.time()
+    start = time.time()
     parse_input("inputPS5.txt")                
-    print(time.time()-stat)
+    print(time.time()-start)
