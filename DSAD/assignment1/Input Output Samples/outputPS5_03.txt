@@ -1,5 +1,5 @@
-Company: General Group
-No of operations: 29
+Company: General GroupCompany: General Group
+No of operations: 19
 ACQUIRED SUCCESS:General Group Successfully acquired aviation
 ACQUIRED SUCCESS:aviation Successfully acquired aviation fuel
 ACQUIRED SUCCESS:General Group Successfully acquired HOTEL CHAIN
@@ -7,13 +7,23 @@ DETAIL: General Group
 Acquired companies:aviation, HOTEL CHAIN 
 No of companies acquired: 2
 RELEASED SUCCESS: released aviation successfully.
-aviation does not exist!
+DETAIL: aviation does not exist!
+ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Cab Service
+No of operations: 19
+ACQUIRED SUCCESS:General Group Successfully acquired aviation
+ACQUIRED SUCCESS:aviation Successfully acquired aviation fuel
+ACQUIRED SUCCESS:General Group Successfully acquired HOTEL CHAIN
+DETAIL: General Group
+Acquired companies:aviation, HOTEL CHAIN 
+No of companies acquired: 2
+RELEASED SUCCESS: released aviation successfully.
+DETAIL: aviation does not exist!
 ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Cab Service
 RELEASED SUCCESS: released aviation fuel successfully.
 ACQUIRED SUCCESS:General Group Successfully acquired Rental Bikes
 DETAIL: General Group
-Acquired companies:HOTEL CHAIN, Rental Bikes
-No of companies acquired: 2
+Acquired companies:HOTEL CHAIN, aviation fuel Rental Bikes
+No of companies acquired: 3
 ACQUIRED SUCCESS:General Group Successfully acquired Tours & Packages
 ACQUIRED SUCCESS:General Group Successfully acquired Spa Center
 ACQUIRED SUCCESS:Tours & Packages Successfully acquired EBOOKINGS
@@ -23,8 +33,8 @@ ACQUIRED SUCCESS:EBOOKINGS Successfully acquired Payment Gateway
 RELEASED SUCCESS: released Laundry Services successfully.
 RELEASED SUCCESS: released EBBOKINGS successfully.
 DETAIL: General Group
-Acquired companies:HOTEL CHAIN, Rental Bikes, Tours & Packages, Spa Center
-No of companies acquired: 4
+Acquired companies:HOTEL CHAIN, aviation fuel, Rental Bikes, Tours & Packages, Spa Center
+No of companies acquired: 5
 RELEASED SUCCESS: released HOTEL CHAIN successfully.
 DETAIL: Catering Services
 Acquired companies:NONE
@@ -34,9 +44,9 @@ ACQUIRED SUCCESS:Spa Center Successfully acquired Wellness Clinic
 Company already exist!!!
 ACQUIRED SUCCESS:General Group Successfully acquired Airport Shuttle Service
 DETAIL: Tours & Packages
-Acquired companies:NONE
-No of companies acquired: 0
-RELEASED SUCCESS: released Rental Bikes successfully.
-INVALID FUNCTION!!!
+Acquired companies:Payment Gateway
+No of companies acquired: 1
 RELEASED SUCCESS: released Rental Bikes successfully.
 RELEASED FAILED: Cannot release root node
+DETAIL: General Group
+Acquired companies: aviation fuel, Cab Services, Tours & Packages, Spa Center, Event Planners, Airport Shuttle
