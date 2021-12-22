@@ -10,12 +10,12 @@ ACQUIRED:Cab Service BY:HOTEL CHAIN
 RELEASE aviation fuel
 ACQUIRED:Rental Bikes BY:General Group
 DETAIL General Group
-ACQUIRED:Tours & Packages BY: General Group
+ACQUIRED:Tours & Packages BY:General Group
 ACQUIRED:Spa Center BY: General Group
 ACQUIRED:EBOOKINGS BY:Tours & Packages 
-ACQUIRED:Catering Services BY: HOTEL CHAIN
-ACQUIRED:Laundry Services BY: HOTEL CHAIN
-ACQUIRED:Payment Gateway BY: EBOOKINGS
+ACQUIRED:Catering Services BY:HOTEL CHAIN
+ACQUIRED:Laundry Services BY:HOTEL CHAIN
+ACQUIRED:Payment Gateway BY:EBOOKINGS
 RELEASE Laundry Services
 RELEASE EBOOKINGS
 DETAIL General Group
