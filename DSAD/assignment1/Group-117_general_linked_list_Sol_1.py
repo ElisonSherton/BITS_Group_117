@@ -2,13 +2,13 @@
 @author Vinayak, Sai, Niyati
 @email 2021fc04135@wilp.bits-pilani.ac.in
 @create date 2021-12-19 16:43:05
-@modify date 2021-12-21 23:30:31
+@modify date 2021-12-22 11:35:16
 @desc [Code to implement company acquisition in the form of a general tree using linked lists]
 '''
 
 from typing import List
 from pathlib import Path
-import re
+import re, time
 
 class Node:
     def __init__(self, parent_company: object, company_name: str):
@@ -85,10 +85,10 @@ class Tree:
         acquired_presence = self.search(acquired_company)
         # Check if the company which is acquiring (parent company) is already present in the hierarchy or not
         if not presence[0]:
-            return f"ACQUIRED FAILED: {acquired_company} by {parent_company}"
+            return f"ACQUIRED FAILED: {acquired_company} by {parent_company}. {parent_company} does not exist in hierarchy"
         # Check if the company that is to be acquired is already in the hierarchy
         elif acquired_presence[0]:
-            return f"ACQUIRED FAILED:{acquired_company} BY:{parent_company}"
+            return f"ACQUIRED FAILED:{acquired_company} BY:{parent_company}. {acquired_company} already in the hierarchy. No child can have two parents."
         # Otherwise, add the acquired company as a subsidiary of the parent company
         else:
             subsidiary_company = Node(presence[1], acquired_company)
@@ -146,13 +146,13 @@ class Tree:
 
         # Check if the requested company to release exists in the organizational hierarchy
         if not presence[0]:
-            return f"RELEASE FAILED: release {company_name} failed."
+            return f"RELEASE FAILED: release {company_name} failed. Company to be released does not exist."
         # Check if the requested company is the master company, if so raise an exception
         else:
             to_remove = presence[1]
             if self.root.company_name == company_name:
                 self.root = None
-                return f"RELEASE SUCCESS: released {company_name} succesfully."
+                return f"RELEASE SUCCESS: released {company_name} successfully."
             else:
                 # Create an empty list for new subsidiaries (devoid of this company)
                 new_subsidiaries = []
@@ -167,7 +167,7 @@ class Tree:
                             new_subsidiaries.append(grandson_subsidiary)
 
                 to_remove.parent_company.acquired_companies = new_subsidiaries
-            return f"RELEASE SUCCESS: released {company_name} successfully."
+            return f"RELEASE SUCCESS: released {company_name} successfully"
             
 def parse_input(input_pth: str):
     """[Reads an input file, performs the operations in it in a line by line fashion and prints the output to another file]
@@ -176,7 +176,7 @@ def parse_input(input_pth: str):
     instructions = [x.strip() for x in Path(input_pth).read_text().split("\n")]
     
     # Open an output file and start logging everything over there
-    with open("output.txt", "w") as f:
+    with open("outputPS5.txt", "w") as f:
         # Read the base company name and number of operations
         base_conglomerate = instructions[0].replace("Company: ", "")
         n = int(re.findall(r"\d+", instructions[1])[0])
@@ -204,5 +204,7 @@ def parse_input(input_pth: str):
                 to_write = "ERROR: Couldn't interpret the instruction"
 
             f.writelines(f"{to_write}\n")
-
-parse_input("sample_input.txt")                
+if __name__ == "__main__":
+    stat = time.time()
+    parse_input("inputPS5.txt")                
+    print(time.time()-stat)
