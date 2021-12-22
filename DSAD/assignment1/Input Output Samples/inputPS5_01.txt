@@ -2,7 +2,7 @@ Company: General Group
 No of operations: 10
 ACQUIRED:aviation BY:General Group
 ACQUIRED:aviation fuel BY:aviation
-ACQUIRED:HOTEL CHAIN BY: General Group
+ACQUIRED:HOTEL CHAIN BY:General Group
 DETAIL General Group
 RELEASE aviation
 DETAIL aviation 
