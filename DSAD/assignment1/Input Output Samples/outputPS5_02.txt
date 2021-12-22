@@ -12,7 +12,7 @@ ACQUIRED SUCCESS:HOTEL CHAIN Successfully acquired Cab Service
 RELEASED SUCCESS: released aviation fuel successfully.
 ACQUIRED SUCCESS:General Group Successfully acquired Rental Bikes
 DETAIL: General Group
-Acquired companies:HOTEL CHAIN, aviation fuel Rental Bikes
+Acquired companies:HOTEL CHAIN, Rental Bikes
 No of companies acquired: 3
 ACQUIRED SUCCESS:General Group Successfully acquired Tours & Packages
 ACQUIRED SUCCESS:General Group Successfully acquired Spa Center
@@ -23,5 +23,5 @@ ACQUIRED SUCCESS:EBOOKINGS Successfully acquired Payment Gateway
 RELEASED SUCCESS: released Laundry Services successfully.
 RELEASED SUCCESS: released EBBOKINGS successfully.
 DETAIL: General Group
-Acquired companies:HOTEL CHAIN, aviation fuel Rental Bikes, Tours & Packages, Spa Center
-No of companies acquired: 5
+Acquired companies:HOTEL CHAIN, Rental Bikes, Tours & Packages, Spa Center
+No of companies acquired: 4
