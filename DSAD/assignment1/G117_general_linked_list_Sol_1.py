@@ -1,8 +1,8 @@
 '''
 @author Vinayak, Sai, Niyati
-@email 2021fc04135@wilp.bits-pilani.ac.in
+@email 2021fc04135@wilp.bits-pilani.ac.in, 2021fc04136@wilp.bits-pilani.ac.in, 2021fc04140@wilp.bits-pilani.ac.in
 @create date 2021-12-19 16:43:05
-@modify date 2021-12-22 16:22:22
+@modify date 2021-12-22 16:33:40
 @desc [Code to implement company acquisition in the form of a general tree using linked lists]
 '''
 
