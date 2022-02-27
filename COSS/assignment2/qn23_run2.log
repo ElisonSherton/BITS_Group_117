@@ -1,0 +1,156 @@
+"00:01:24(24.410) [OS0: 00000000]: P1(4)  loaded into the READY queue [Memory=1 pages, Priority=3]
+00:02:12(12.155) [OS0: 00000000]: 
+00:02:12(12.155) [OS0: 00000000]: NEW SCHEDULER SESSION STARTED
+00:02:12(12.155) [OS0: 00000000]: Scheduling scheme is Round Robin using Static Priority (Pre-emptive): Time slots 5 secs
+00:02:12(12.155) [OS0: 00000000]: Memory allocation policy is First Fit
+00:02:12(12.493) [OS0: 00000000]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:02:15(15.231) [OS0: 00000001]: P2(5)  loaded into the READY queue [Memory=1 pages, Priority=2]
+00:02:15(15.231) [OS0: 00000001]: P1(4)  moved from RUNNING to READY state
+00:02:15(15.231) [OS0: 00000001]: P3(6)  loaded into the READY queue [Memory=1 pages, Priority=4]
+00:02:16(15.524) [OS0: 00000001]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:02:18(17.765) [OS0: 00000002]: P2(5)  moved from RUNNING to READY state
+00:02:18(18.015) [OS0: 00000002]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:02:18(18.328) [OS0: 00000002]: P4(7)  loaded into the READY queue [Memory=1 pages, Priority=1]
+00:02:18(18.328) [OS0: 00000002]: P2(5)  moved from RUNNING to READY state
+00:02:19(18.555) [OS0: 00000002]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:02:24(23.538) [OS0: 00000005]: P4(7)  moved from RUNNING to READY state
+00:02:24(23.788) [OS0: 00000005]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:02:28(27.805) [OS0: 00000008]: P4(7)  moved from RUNNING to READY state
+00:02:28(28.055) [OS0: 00000008]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:02:33(32.574) [OS0: 00000011]: P4(7)  moved from RUNNING to READY state
+00:02:33(32.824) [OS0: 00000011]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:02:37(37.342) [OS0: 00000014]: P4(7)  moved from RUNNING to READY state
+00:02:38(37.593) [OS0: 00000014]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:02:43(43.367) [OS0: 00000018]: P4(7)  moved from RUNNING to READY state
+00:02:44(43.617) [OS0: 00000018]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:02:48(47.633) [OS0: 00000021]: P4(7)  moved from RUNNING to READY state
+00:02:48(47.884) [OS0: 00000021]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:02:53(53.156) [OS0: 00000025]: P4(7)  moved from RUNNING to READY state
+00:02:53(53.407) [OS0: 00000025]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:02:57(57.422) [OS0: 00000028]: P4(7)  moved from RUNNING to READY state
+00:02:58(57.673) [OS0: 00000028]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:03:03(02.944) [OS0: 00000032]: P4(7)  moved from RUNNING to READY state
+00:03:03(03.196) [OS0: 00000032]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:03:08(08.215) [OS0: 00000036]: P4(7)  moved from RUNNING to READY state
+00:03:08(08.467) [OS0: 00000036]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:03:12(12.482) [OS0: 00000039]: P4(7)  moved from RUNNING to READY state
+00:03:13(12.733) [OS0: 00000039]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:03:18(18.004) [OS0: 00000043]: P4(7)  moved from RUNNING to READY state
+00:03:18(18.255) [OS0: 00000043]: P4(7)  moved from READY to RUNNING state on CPU 0
+00:03:23(22.523) [OS0: 00000045]: P4(7)  terminated normally
+00:03:23(22.523) [OS0: 00000045]: *** STATS FOR PROCESS P4(7) ***
+00:03:23(22.523) [OS0: 00000045]: Elapsed Time = 00:01:04(03.968)
+00:03:23(22.523) [OS0: 00000045]: Avg. Waiting Time = 0.25 sec
+00:03:23(22.523) [OS0: 00000045]: Avg. Burst Period = 3
+00:03:23(22.523) [OS0: 00000045]: Tick Count = 43
+00:03:23(22.523) [OS0: 00000045]: Memory Swap Count = 0
+00:03:23(23.025) [OS0: 00000046]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:03:25(25.032) [OS0: 00000047]: P2(5)  moved from RUNNING to READY state
+00:03:25(25.284) [OS0: 00000047]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:03:27(27.291) [OS0: 00000048]: P2(5)  moved from RUNNING to READY state
+00:03:28(27.543) [OS0: 00000048]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:03:33(33.315) [OS0: 00000052]: P2(5)  moved from RUNNING to READY state
+00:03:34(33.566) [OS0: 00000052]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:03:38(37.582) [OS0: 00000055]: P2(5)  moved from RUNNING to READY state
+00:03:38(37.833) [OS0: 00000055]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:03:42(42.352) [OS0: 00000058]: P2(5)  moved from RUNNING to READY state
+00:03:43(42.603) [OS0: 00000058]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:03:48(48.375) [OS0: 00000062]: P2(5)  moved from RUNNING to READY state
+00:03:49(48.626) [OS0: 00000062]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:03:53(52.642) [OS0: 00000065]: P2(5)  moved from RUNNING to READY state
+00:03:53(52.893) [OS0: 00000065]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:03:58(58.164) [OS0: 00000069]: P2(5)  moved from RUNNING to READY state
+00:03:58(58.415) [OS0: 00000069]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:02(02.432) [OS0: 00000072]: P2(5)  moved from RUNNING to READY state
+00:04:03(02.682) [OS0: 00000072]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:08(07.954) [OS0: 00000076]: P2(5)  moved from RUNNING to READY state
+00:04:08(08.205) [OS0: 00000076]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:13(13.475) [OS0: 00000080]: P2(5)  moved from RUNNING to READY state
+00:04:14(13.726) [OS0: 00000080]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:18(17.743) [OS0: 00000083]: P2(5)  moved from RUNNING to READY state
+00:04:18(17.993) [OS0: 00000083]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:23(23.265) [OS0: 00000087]: P2(5)  moved from RUNNING to READY state
+00:04:24(23.517) [OS0: 00000087]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:28(27.531) [OS0: 00000090]: P2(5)  moved from RUNNING to READY state
+00:04:28(27.783) [OS0: 00000090]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:33(32.802) [OS0: 00000094]: P2(5)  moved from RUNNING to READY state
+00:04:33(33.053) [OS0: 00000094]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:38(38.324) [OS0: 00000098]: P2(5)  moved from RUNNING to READY state
+00:04:39(38.826) [OS0: 00000098]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:43(42.842) [OS0: 00000101]: P2(5)  moved from RUNNING to READY state
+00:04:43(43.093) [OS0: 00000101]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:48(48.365) [OS0: 00000105]: P2(5)  moved from RUNNING to READY state
+00:04:49(48.615) [OS0: 00000105]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:53(52.631) [OS0: 00000108]: P2(5)  moved from RUNNING to READY state
+00:04:53(52.883) [OS0: 00000108]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:04:58(58.153) [OS0: 00000112]: P2(5)  moved from RUNNING to READY state
+00:04:58(58.405) [OS0: 00000112]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:05:02(02.420) [OS0: 00000115]: P2(5)  moved from RUNNING to READY state
+00:05:03(02.672) [OS0: 00000115]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:05:08(07.942) [OS0: 00000119]: P2(5)  moved from RUNNING to READY state
+00:05:08(08.193) [OS0: 00000119]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:05:13(13.465) [OS0: 00000123]: P2(5)  moved from RUNNING to READY state
+00:05:14(13.715) [OS0: 00000123]: P2(5)  moved from READY to RUNNING state on CPU 0
+00:05:16(16.476) [OS0: 00000124]: P2(5)  terminated normally
+00:05:16(16.476) [OS0: 00000124]: *** STATS FOR PROCESS P2(5) ***
+00:05:16(16.476) [OS0: 00000124]: Elapsed Time = 00:03:01(00.952)
+00:05:16(16.476) [OS0: 00000124]: Avg. Waiting Time = 2.74 sec
+00:05:16(16.476) [OS0: 00000124]: Avg. Burst Period = 3
+00:05:16(16.476) [OS0: 00000124]: Tick Count = 79
+00:05:16(16.476) [OS0: 00000124]: Memory Swap Count = 0
+00:05:17(16.978) [OS0: 00000125]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:05:19(18.986) [OS0: 00000126]: P1(4)  moved from RUNNING to READY state
+00:05:19(19.237) [OS0: 00000126]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:05:23(22.500) [OS0: 00000128]: P1(4)  moved from RUNNING to READY state
+00:05:23(22.751) [OS0: 00000128]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:05:29(28.524) [OS0: 00000132]: P1(4)  moved from RUNNING to READY state
+00:05:29(28.775) [OS0: 00000132]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:05:33(32.791) [OS0: 00000135]: P1(4)  moved from RUNNING to READY state
+00:05:33(33.042) [OS0: 00000135]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:05:38(37.560) [OS0: 00000138]: P1(4)  moved from RUNNING to READY state
+00:05:38(37.812) [OS0: 00000138]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:05:44(43.584) [OS0: 00000142]: P1(4)  moved from RUNNING to READY state
+00:05:44(43.836) [OS0: 00000142]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:05:48(47.851) [OS0: 00000145]: P1(4)  moved from RUNNING to READY state
+00:05:48(48.102) [OS0: 00000145]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:05:53(53.373) [OS0: 00000149]: P1(4)  moved from RUNNING to READY state
+00:05:54(53.624) [OS0: 00000149]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:05:58(57.640) [OS0: 00000152]: P1(4)  moved from RUNNING to READY state
+00:05:58(57.891) [OS0: 00000152]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:03(03.162) [OS0: 00000156]: P1(4)  moved from RUNNING to READY state
+00:06:03(03.413) [OS0: 00000156]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:09(08.684) [OS0: 00000160]: P1(4)  moved from RUNNING to READY state
+00:06:09(08.936) [OS0: 00000160]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:13(12.952) [OS0: 00000163]: P1(4)  moved from RUNNING to READY state
+00:06:13(13.202) [OS0: 00000163]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:18(18.473) [OS0: 00000167]: P1(4)  moved from RUNNING to READY state
+00:06:19(18.724) [OS0: 00000167]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:23(22.740) [OS0: 00000170]: P1(4)  moved from RUNNING to READY state
+00:06:23(22.991) [OS0: 00000170]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:28(28.262) [OS0: 00000174]: P1(4)  moved from RUNNING to READY state
+00:06:29(28.513) [OS0: 00000174]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:34(33.784) [OS0: 00000178]: P1(4)  moved from RUNNING to READY state
+00:06:34(34.035) [OS0: 00000178]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:38(38.051) [OS0: 00000181]: P1(4)  moved from RUNNING to READY state
+00:06:38(38.303) [OS0: 00000181]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:44(43.574) [OS0: 00000185]: P1(4)  moved from RUNNING to READY state
+00:06:44(43.825) [OS0: 00000185]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:48(47.840) [OS0: 00000188]: P1(4)  moved from RUNNING to READY state
+00:06:48(48.091) [OS0: 00000188]: P1(4)  moved from READY to RUNNING state on CPU 0
+00:06:52(52.107) [OS0: 00000190]: P1(4)  terminated normally
+00:06:52(52.107) [OS0: 00000190]: *** STATS FOR PROCESS P1(4) ***
+00:06:52(52.107) [OS0: 00000190]: Elapsed Time = 00:04:40(39.614)
+00:06:52(52.107) [OS0: 00000190]: Avg. Waiting Time = 8.9 sec
+00:06:52(52.107) [OS0: 00000190]: Avg. Burst Period = 3
+00:06:52(52.107) [OS0: 00000190]: Tick Count = 66
+00:06:52(52.107) [OS0: 00000190]: Memory Swap Count = 0
+00:06:53(52.650) [OS0: 00000191]: P3(6)  moved from READY to RUNNING state on CPU 0
+00:08:06(05.650) [OS0: 00000246]: P3(6)  terminated normally
+00:08:06(05.650) [OS0: 00000246]: *** STATS FOR PROCESS P3(6) ***
+00:08:06(05.650) [OS0: 00000246]: Elapsed Time = 00:01:13(13.000)
+00:08:06(05.650) [OS0: 00000246]: Avg. Waiting Time = 277.37 sec
+00:08:06(05.650) [OS0: 00000246]: Avg. Burst Period = 55
+00:08:06(05.650) [OS0: 00000246]: Tick Count = 55
+00:08:06(05.650) [OS0: 00000246]: Memory Swap Count = 0
+00:08:06(05.943) [OS0: 00000247]: Avg. Process Waiting Time = 92.22 sec
+"
