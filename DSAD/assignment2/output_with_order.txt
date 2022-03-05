@@ -1,0 +1,4 @@
+Test case  1 Bonus:   90 Job Sequence: ['Job_1', 'Job_2', 'Job_3', 'Job_5', '']
+Test case  2 Bonus:   90 Job Sequence: ['Job_2', 'Job_4', '', 'Job_1']
+Test case  3 Bonus:   60 Job Sequence: ['Job_3', '', '', 'Job_1']
+Test case  4 Bonus:  142 Job Sequence: ['Job_3', 'Job_1', 'Job_5', '', '']
