@@ -2,11 +2,12 @@
 @author Vinayak
 @email vnayak@okkular.io / nayakvinayak95@gmail.com
 @create date 2022-03-04 21:06:47
-@modify date 2022-03-04 22:24:40
+@modify date 2022-03-05 09:20:40
 @desc [Job Scheduling algorithm]
 '''
 
-from typing import List
+import sched
+from typing import List, Tuple
 from pathlib import Path
 
 class problem:
@@ -20,13 +21,17 @@ class problem:
         self.name = name
         self.deadline = deadline
         self.bonus = bonus
+    
+    def __repr__(self) -> str:
+        return f"Problem: {self.name:<5}, Deadline:{self.deadline:2d}, Bonus:{self.bonus:2d}\n"
 
-def custom_sort(problem_list:List, attribute:str):
+def custom_sort(problem_list:List, attribute:str, descending:bool = True):
     """[Given a list of problems and the attribute on which to sort (i.e. deadline or bonus), sorts the sequence of problems accordingly and returns the same]
 
     Args:
         problem_list (List): [A list of problem objects]
         attribute (str): [A string based on which the given set of problems need to be sorted]
+        descending (bool): [A boolean which tells whether to sort in increasing/decreasing order]
 
     Returns:
         Nothing, sorts the given list in place
@@ -51,9 +56,17 @@ def custom_sort(problem_list:List, attribute:str):
         # Copy the data temporarily to left and right arrays
         while i < len(left) and j < len(right):
             if attribute == "deadline":
-                comparison = left[i].deadline < right[j].deadline
+                if descending:
+                    comparison = left[i].deadline > right[j].deadline
+                else:
+                    comparison = left[i].deadline < right[j].deadline
+                
             elif attribute == "bonus":
-                comparison = left[i].bonus < right[j].bonus
+                if descending:
+                    comparison = left[i].bonus > right[j].bonus
+                else:
+                    comparison = left[i].bonus < right[j].bonus
+                
             
             if comparison:
                 problem_list[k] = left[i]
@@ -76,7 +89,60 @@ def custom_sort(problem_list:List, attribute:str):
             j += 1
             k += 1
 
+def schedule_problems(problem_list:List, attribute:str) -> Tuple:
+    """[Given a list of problems, schedules them to maximize the bonus]
+
+    Args:
+        problem_list (List): [List of problems]
+        attribute (str): [Attribute which needs to be maximized]
+
+    Returns:
+        Tuple: [Ideal sequence of problems, best possible bonus]
+    """
+    # Sort the problem list based on the attribute to be maximized
+    custom_sort(problem_list, attribute)
+
+    # Find the total number of problems in the problem list
+    total_problems = len(problem_list)
+
+    # Generate a slots array for scheduling the best problems
+    slots = ["empty"] * total_problems
+
+    # Accumulate bonus in a variable, initialize it to zero
+    max_bonus = 0
+
+    # Iterate over the problem list
+    for problem in problem_list:
+        deadline = problem.deadline
+        bonus = problem.bonus
+        
+        # Look for the latest time slot for this problem which is not empty
+        for idx in range(min(deadline - 1, total_problems),-1,-1):
+            slt = slots[idx]
+            if slt == "empty":
+                slots[idx] = problem.name
+                max_bonus += bonus
+                break
     
+    # Look at the problems which haven't been scheduled so far
+    # They can be scheduled in any order but it makes sense to schedule 
+    # them in the ascending order of their deadlines from a practical point of view
+    unscheduled_problems = []
+    for problem in problem_list:
+        if not problem.name in slots:
+            unscheduled_problems.append(problem)
+    custom_sort(unscheduled_problems, "deadline", descending = False)
+
+    unscheduled_problems_counter = 0
+    for idx in range(total_problems):
+        if slots[idx] == "empty":
+            slots[idx] = unscheduled_problems[unscheduled_problems_counter].name
+            unscheduled_problems_counter += 1            
+            
+    return (slots, max_bonus)
+
+    
+
 # Write the main logic of the code here
 if __name__ == "__main__":
     # Read the input file
@@ -100,13 +166,6 @@ if __name__ == "__main__":
             pb = problem(name, deadline, bonus)
             problem_list.append(pb)
         
-        for node in problem_list:
-            print(f"Name {node.name:<3} Deadline {node.deadline:<.2f} Bonus {node.bonus:<.2f}")
-
-        print("Sorted")
-
-        custom_sort(problem_list, "bonus")
-        for node in problem_list:
-            print(f"Name {node.name:<3} Deadline {node.deadline:<.2f} Bonus {node.bonus:<.2f}")
+        slots, bonus = schedule_problems(problem_list, "bonus")
+        print(slots, bonus)
         
-        print("_"*50)
