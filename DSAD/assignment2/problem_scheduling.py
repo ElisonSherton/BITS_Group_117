@@ -2,7 +2,7 @@
 @author Vinayak
 @email vnayak@okkular.io / nayakvinayak95@gmail.com
 @create date 2022-03-04 21:06:47
-@modify date 2022-03-05 23:12:24
+@modify date 2022-03-07 16:25:30
 @desc [Problem Scheduling algorithm]
 '''
 
@@ -12,7 +12,7 @@ from pathlib import Path
 # Define two global variables one for indicating if we need to finish all problems
 # And another to tell if the order of processes needs to be mentioned
 SCHEDULE_ALL = False
-SCHEDULE_ORDER = True
+SCHEDULE_ORDER = False
 
 class problem:
     def __init__(self, name:str, deadline:int, bonus:int):
