@@ -2,7 +2,7 @@
 @author Vinayak
 @email vnayak@okkular.io / nayakvinayak95@gmail.com
 @create date 2022-03-04 21:06:47
-@modify date 2022-03-07 16:25:30
+@modify date 2022-03-11 12:42:34
 @desc [Problem Scheduling algorithm]
 '''
 
